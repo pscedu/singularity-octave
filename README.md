@@ -9,7 +9,7 @@ Singularity recipe for [octave](https://www.gnu.org/software/octave/).
 We are nothing but a humble programmers creating the container for this wonderful app. 
 
 ### About the programmers
-Geeks in charge are [syakante](http://www.github.com/syakante), [uhq1](http://www.github.com/uhq1) and [icaoberg](http//www.github.com/icaoberg).
+Geeks in charge are [syakante](http://www.github.com/syakante), [uhq1](http://www.github.com/uhq1) and [icaoberg](http://www.github.com/icaoberg).
 
 ---
 [![CBD](http://www.cbd.cmu.edu/wp-content/uploads/2017/07/wordpress-default.png)](http://www.cbd.cmu.edu)
