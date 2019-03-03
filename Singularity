@@ -12,27 +12,16 @@ IncludeCmd: yes
     exec /bin/bash "$@"
 
 %post
-    echo "Update aptitude"
+    echo "Update and upgrade"
     /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 ####################################################################################
-%appenv gnuplot
-    APP=/path/to/gnuplot
+%appenv octave
+    APP=/path/to/octave
     export APP
 
 %apphelp gifgen
-    For more information about goto visit http://www.gnuplot.info
+    For more information about goto visit http://www.octave.info
 
-%apprun gnuplot
-    gnuplot "$@"
-
-####################################################################################
-%appenv ffmpeg
-    APP=/usr/bin/ffmpeg
-    export APP
-
-%apphelp ffmpeg
-    For more information about ffmpeg visit https://www.ffmpeg.org/
-
-%apprun ffmpeg
-    ffmpeg "$@"
+%apprun octave
+    octave "$@"

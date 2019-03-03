@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE=singularity-gnuplot.simg
+IMAGE=singularity-octave.simg
 DEFINITION=Singularity
 
 if [ -f $IMAGE ]; then

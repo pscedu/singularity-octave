@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE=singularity-gnuplot
+IMAGE=singularity-octave
 DIRECTORY=~/.singularity
 
 if [ ! -d $DIRECTORY ]; then
