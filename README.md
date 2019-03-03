@@ -1,7 +1,9 @@
-# gnuplot
+# octave
+
+![Octave](https://www.gnu.org/software/octave/img/GNU_Octave_4-4-0_screenshot_1600x900.png)
 
 ## About
-Singularity recipe for [gnuplot](https://www.gnuplot.info)..
+Singularity recipe for [octave](https://www.gnu.org/software/octave/).
 
 ## Disclaimer
 We are nothing but a humble programmers creating the container for this wonderful app. Please visit the [original developer](https://github.com/lukechilds) for more info about the app.
