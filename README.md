@@ -1,4 +1,4 @@
-# octave
+# singularity-octave
 
 ![Octave](https://www.gnu.org/software/octave/img/GNU_Octave_4-4-0_screenshot_1600x900.png)
 
@@ -6,7 +6,7 @@
 Singularity recipe for [octave](https://www.gnu.org/software/octave/).
 
 ## Disclaimer
-We are nothing but a humble programmers creating the container for this wonderful app. 
+We are nothing but humble programmers creating the container for this wonderful app. 
 
 ### About the programmers
 Geeks in charge are [syakante](http://www.github.com/syakante), [uhq1](http://www.github.com/uhq1) and [icaoberg](http://www.github.com/icaoberg).
