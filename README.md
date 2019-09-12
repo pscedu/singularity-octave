@@ -1,4 +1,5 @@
 # singularity-octave
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/3528)
 
 ![Octave](https://www.gnu.org/software/octave/img/GNU_Octave_4-4-0_screenshot_1600x900.png)
 
