@@ -4,8 +4,8 @@ From: ubuntu:16.04
 IncludeCmd: yes
 
 %labels
-    MAINTAINER icaoberg@cmu.edu
-    WEBSITE http://www.cbd.cmu.edu/icaoberg
+    MAINTAINER icaoberg@alumni.cmu.edu
+    WEBSITE http://linus.cbd.cs.cmu.edu
     VERSION 1.0
 
 %runscript
@@ -14,13 +14,14 @@ IncludeCmd: yes
 %post
     echo "Update and upgrade"
     /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
+    /usr/bin/apt-get install -y octave
 
 ####################################################################################
 %appenv octave
-    APP=/path/to/octave
+    APP=/usr/bin/octave
     export APP
 
-%apphelp gifgen
+%apphelp octave
     For more information about goto visit http://www.octave.info
 
 %apprun octave
