@@ -5,6 +5,18 @@
 ## About
 Singularity recipe for [octave](https://www.gnu.org/software/octave/).
 
+## Run
+### Terminal
+```
+singularity run --app octave singularity-octave.simg
+```
+
+### Editor
+```
+singularity run --app octave singularity-octave.simg --force-gui
+```
+
+
 ## Disclaimer
 We are nothing but humble programmers creating the container for this wonderful app. 
 
