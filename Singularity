@@ -4,6 +4,7 @@ From: debian:latest
 IncludeCmd: yes
 
 %labels
+    AUTHOR icaoberg
     MAINTAINER icaoberg@alumni.cmu.edu
     WEBSITE http://linus.cbd.cs.cmu.edu
     VERSION 1.0
