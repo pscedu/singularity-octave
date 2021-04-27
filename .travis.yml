@@ -1,0 +1,57 @@
+os: linux
+
+# whitelist
+branches:
+  only:
+    - main
+
+language: go
+
+go:
+    - "1.13"
+
+python:
+    - "3.7"
+
+addons:
+  apt:
+    packages:
+      - flawfinder
+      - squashfs-tools
+      - uuid-dev
+      - libuuid1
+      - libffi-dev
+      - libssl-dev
+      - libssl1.0.0
+      - libarchive-dev
+      - libgpgme11-dev
+      - libseccomp-dev
+      - tree
+  homebrew:
+    packages:
+      - squashfs
+    update: true
+
+sudo: required
+#dist: trusty
+
+matrix:
+  include:
+    - python: "3.7"
+
+git:
+    submodules: false
+
+before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - sed -i 's/git@gist.github.com:/https:\/\/gist.github.com\//' .gitmodules
+  - git submodule update --init --recursive
+  - sudo chmod u+x .travis/*.sh
+  - /bin/bash .travis/setup.sh
+
+install:
+  - # override
+
+script:
+  - cd 6.2.0 && bash ./build.sh
+  - tree .
