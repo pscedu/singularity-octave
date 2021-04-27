@@ -1,30 +1,37 @@
 # singularity-octave
-[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/3528)
+[![Build Status](https://www.travis-ci.com/icaoberg/singularity-octave.svg?branch=main)](https://www.travis-ci.com/icaoberg/singularity-octave)
 
 ![Octave](https://www.gnu.org/software/octave/img/GNU_Octave_4-4-0_screenshot_1600x900.png)
 
-## About
 Singularity recipe for [octave](https://www.gnu.org/software/octave/).
 
-## Run
-### Terminal
-```
-singularity run --app octave singularity-octave.simg
-```
+## Building the image using the recipe
 
-### Editor
+### To build the image locally
+Run the script `build.sh` to build image locally.
+
 ```
-singularity run --app octave singularity-octave.simg --force-gui
+bash ./build.sh
 ```
 
+### To build the image remotely
+Run the script `rbuild.sh` to build image locally.
 
-## Disclaimer
-We are nothing but humble programmers creating the container for this wonderful app. 
+```
+bash ./build.sh
+```
 
-### About the programmers
-Geeks in charge are [syakante](http://www.github.com/syakante), [uhq1](http://www.github.com/uhq1) and [icaoberg](http://www.github.com/icaoberg).
+## Installing the container on Bridges (or similar)
+Copy the
+
+* `SIF` file
+* and the `octave` and `octave-gui` scripts
+
+to `/opt/packages/octave/6.2.0`.
+
+Copy the file `modulefile.lua` to `/opt/modules/octave` as `6.2.0.lua`.
 
 ---
-[![CBD](http://www.cbd.cmu.edu/wp-content/uploads/2017/07/wordpress-default.png)](http://www.cbd.cmu.edu)
+Copyright © 2021 Pittsburgh Supercomputing Center. All Rights Reserved.
 
-Copyleft © 2018-2019 [icaoberg](http://www.andrew.cmu.edu/~icaoberg) at the [Computational Biology Department](http://www.cbd.cmu.edu) in [Carnegie Mellon University](http://www.cmu.edu)
+[icaoberg](http://www.andrew.cmu.edu/~icaoberg) at the [Pittsburgh Supercomputing Center](http://www.psc.edu) in the [Mellon College of Science](https://www.cmu.edu/mcs/) at [Carnegie Mellon University](http://www.cmu.edu).
