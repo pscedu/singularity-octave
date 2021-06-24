@@ -1,7 +1,6 @@
-name: Singularity Build
-on: [push]
+name: Singularity build
+on: [push, pull_request]
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-18.04
@@ -16,23 +15,22 @@ jobs:
     - name: Check out code for the container build
       uses: actions/checkout@v1
 
-    - name: Build Container
-      env:
-        SINGULARITY_RECIPE: Singularity
-        OUTPUT_CONTAINER: container.sif
+    - name: Build and test container
       run: |
-       cd 1.0.0
-       if [ -f "${SINGULARITY_RECIPE}" ]; then
-           singularity build ${OUTPUT_CONTAINER} ${SINGULARITY_RECIPE}
-       else
-           echo "${SINGULARITY_RECIPE} is not found."
-           echo "Present working directory: $PWD"
-           ls
-       fi
+       for DIRECTORY in *
+       do
+         if [ -d $DIRECTORY ]; then
+           cd $DIRECTORY
 
-       if [ -f ${OUTPUT_CONTAINER} ]; then
-           echo "${OUTPUT_CONTAINER} image found."
-       else
-           echo "${OUTPUT_CONTAINER} image not found."
-           exit 1
-       fi
+           echo "Building container"
+           bash ./build.sh
+
+           if [ -f ./test.sh ]; then
+            echo "Running tests"
+            bash ./test.sh
+           else
+            echo "Test file not found. Skipping tests."
+           fi
+           cd ..
+         fi
+       done
