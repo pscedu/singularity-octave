@@ -5,8 +5,6 @@
 ![License](https://img.shields.io/github/license/pscedu/singularity-octave)
 
 # singularity-octave
-[![Build Status](https://www.travis-ci.com/icaoberg/singularity-octave.svg?branch=main)](https://www.travis-ci.com/icaoberg/singularity-octave)
-
 ![Octave](https://www.gnu.org/software/octave/img/GNU_Octave_4-4-0_screenshot_1600x900.png)
 
 Singularity recipe for [octave](https://www.gnu.org/software/octave/).
