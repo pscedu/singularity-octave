@@ -13,7 +13,9 @@ fi
 #docker build -t pscedu/octave:6.2.0 .
 #sudo singularity build $IMAGE library://pscedu/octave:6.2.0
 
-singularity build --remote $IMAGE $DEFINITION
+if [ -f $DEFINITION ]; then
+	sudo singularity build $IMAGE $DEFINITION
+fi
 
 if [ -f $IMAGE ]; then
 	exit 0
