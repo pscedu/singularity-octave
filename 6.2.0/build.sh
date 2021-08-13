@@ -10,12 +10,7 @@ if [ -f $IMAGE ]; then
 	rm -fv $IMAGE
 fi
 
-#docker build -t pscedu/octave:6.2.0 .
-#sudo singularity build $IMAGE library://pscedu/octave:6.2.0
-
-if [ -f $DEFINITION ]; then
-	sudo singularity build $IMAGE $DEFINITION
-fi
+sudo singularity build $IMAGE $DEFINITION
 
 if [ -f $IMAGE ]; then
 	exit 0

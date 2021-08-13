@@ -2,7 +2,7 @@
 
 VERSION=6.2.0
 PACKAGE=octave
-TOOL=octave-gui
+TOOL=gnuplot
 DIRECTORY=$(dirname "$0")
 
 PERSISTENT_FILE_STORAGE=/ocean
@@ -14,4 +14,4 @@ if [ -d /local ]; then
 	OPTIONS=$OPTIONS" -B /local"
 fi
 
-singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif octave --force-gui "$@"
+singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif gnuplot "$@"

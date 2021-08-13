@@ -14,4 +14,4 @@ if [ -d /local ]; then
 	OPTIONS=$OPTIONS" -B /local"
 fi
 
-singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif octave "$@"
+singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif octave-cli "$@"
