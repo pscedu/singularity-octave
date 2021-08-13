@@ -5,8 +5,6 @@
 ![License](https://img.shields.io/github/license/pscedu/singularity-octave)
 
 # singularity-octave
-![Octave](https://www.gnu.org/software/octave/img/GNU_Octave_4-4-0_screenshot_1600x900.png)
-
 Singularity recipe for [octave](https://www.gnu.org/software/octave/).
 
 ## Installing the container on Bridges 2
@@ -15,9 +13,9 @@ Copy the
 * `SIF` file
 * and the `octave` script
 
-to `/opt/packages/octave/6.2.0`.
+to `/opt/packages/octave/6.3.0`.
 
-Copy the file `modulefile.lua` to `/opt/modulefiles/octave` as `6.2.0.lua`.
+Copy the file `modulefile.lua` to `/opt/modulefiles/octave` as `6.3.0.lua`.
 
 ## Building the image using the recipe
 
