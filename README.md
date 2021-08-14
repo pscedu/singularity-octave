@@ -6,13 +6,13 @@
 ![License](https://img.shields.io/github/license/pscedu/singularity-octave)
 
 # singularity-octave
-Singularity recipe for [octave](https://www.gnu.org/software/octave/).
+Singularity recipe for [Octave](https://www.gnu.org/software/octave/).
 
 ## Installing the container on Bridges 2
 Copy the
 
 * `SIF` file
-* and the `octave` script
+* and the `octave-cli`, `pandoc` and `gnuplot` scripts
 
 to `/opt/packages/octave/6.3.0`.
 
