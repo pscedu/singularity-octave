@@ -6,6 +6,8 @@
 ![License](https://img.shields.io/github/license/pscedu/singularity-octave)
 
 # singularity-octave
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Gnu-octave-logo.svg/1920px-Gnu-octave-logo.svg.png" width="15%">
+
 Singularity recipe for [Octave](https://www.gnu.org/software/octave/).
 
 ## Installing the container on Bridges 2
