@@ -29,6 +29,12 @@ Tools included in this module are
 * gnuplot
 * pandoc
 
+For simplicty, this container also contains
+
+* emacs
+* vim
+* nano
+
 The Octave packages installed in this container are
 
 * general 2.1.1
