@@ -1,0 +1,39 @@
+#%Module1.0
+#INSTALLATION instructions can be found here https://github.com/pscedu/singularity-octave
+
+## "URL: https://www.psc.edu/resources/software"
+## "Category: Other"
+
+ proc ModulesHelp { } {
+ global dotversion
+ puts stderr "octave  6.3.0 (octave)"
+ puts stderr "----------------------"
+ puts stderr "\nTo enable, first load the following required modules (via modul
+e load command): "
+ puts stderr "\n\tmodule load octave/6.3.0"
+ puts stderr "\nFor a full list of binaries included in this module, type"
+ puts stderr "\n\tmodule what-is octave/6.3.0"
+ }
+
+module-whatis "octave 6.3.0
+
+Tools included in this module are
+
+  * octave
+  * gnuplot
+  * pandoc
+
+The Octave packages installed in this container are
+
+  * general 2.1.1
+  * image 2.12.0
+  * io 2.6.3
+  * control 3.3.1
+  * signal 1.4.1
+  * struct 1.0.17
+  * parallel 4.0.1
+  * splines 1.3.4"
+
+set OCTAVE_HOME /bil/packages/octave/6.3.0
+setenv OCTAVE_HOME ${OCTAVE_HOME}
+prepend-path PATH ${OCTAVE_HOME}
