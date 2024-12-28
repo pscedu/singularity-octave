@@ -26,6 +26,7 @@ To unload the module type
 Tools included in this module are
 
 * octave-cli
+* octave
 * gnuplot
 * pandoc
 

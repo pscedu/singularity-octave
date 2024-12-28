@@ -6,7 +6,7 @@ From: gnuoctave/octave:7.3.0
     EMAIL icaoberg@psc.edu
     SUPPORT help@psc.edu
     WEBSITE http://github.com/pscedu/singularity-octave
-    COPYRIGHT Copyright © 2022, Pittsburgh Supercomputing Center. All Rights Reserved.
+    COPYRIGHT Copyright © 2024, Pittsburgh Supercomputing Center. All Rights Reserved.
     VERSION 7.3.0
 
 %post
@@ -14,3 +14,6 @@ From: gnuoctave/octave:7.3.0
     apt-get install -y gnuplot pandoc vim imagemagick ffmpeg
     apt-get clean
     apt-get autoclean
+
+%runscript
+    octave-cli "$@"

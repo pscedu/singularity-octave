@@ -5,7 +5,7 @@
 
 VERSION=7.3.0
 PACKAGE=octave
-TOOL=octave-cli
+TOOL=vim
 DIRECTORY=$(dirname "$0")
 
 STORAGES=(/ocean /bil /hive /local)
@@ -18,4 +18,4 @@ do
         fi
 done
 
-singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif $TOOL "$@"
+singularity exec $OPTIONS $DIRECTORY/singularity-$PACKAGE-$VERSION.sif octave -W "$@"
