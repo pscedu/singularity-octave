@@ -1,6 +1,18 @@
 #!/bin/bash
 
-module load octave
+set -x
+
+# Check if module command is available and octave module exists, then load it
+# Check if module command is available and octave module exists, then load it
+if command -v module >/dev/null 2>&1 && module avail octave 2>&1 | grep -q octave; then
+    module load octave
+else
+    VERSION=7.3.0
+    PACKAGE=octave
+
+    alias octave="singularity exec singularity-$PACKAGE-$VERSION.sif octave -W"
+    alias gnuplot="singularity exec singularity-$PACKAGE-$VERSION.sif gnuplot"
+fi
 
 # Check if octave and gnuplot are installed
 command -v octave >/dev/null 2>&1 || { echo "Error: Octave is required but not installed."; exit 1; }
@@ -27,7 +39,7 @@ EOF
 
 # Check if plot.png was created
 if [ -f "plot.png" ]; then
-    echo "true"
+    echo "Successfully saved plot.png to disk."
 else
     echo "Error: Failed to save plot.png to disk."
     exit 1
