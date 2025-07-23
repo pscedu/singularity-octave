@@ -1,0 +1,19 @@
+Bootstrap: docker
+From: gnuoctave/octave:10.2.0
+
+%labels
+    MAINTAINER icaoberg, luism
+    EMAIL icaoberg@psc.edu, luism@psc.edu
+    SUPPORT help@psc.edu
+    WEBSITE http://github.com/pscedu/singularity-octave
+    COPYRIGHT Copyright © 2024-2025, Pittsburgh Supercomputing Center. All Rights Reserved.
+    VERSION 10.2.0
+
+%post
+    apt-get update
+    apt-get install -y gnuplot pandoc vim imagemagick ffmpeg
+    apt-get clean
+    apt-get autoclean
+
+%runscript
+    octave-cli "$@"
