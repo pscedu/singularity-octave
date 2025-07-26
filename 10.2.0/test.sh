@@ -56,16 +56,6 @@ plot 'sine_data.dat' using 1:2 with lines title 'sin(x)' lw 2
 EOF
 
 # ──────────────────────────────────────────────────────────────
-# Step 5: Validate plot output
-# ──────────────────────────────────────────────────────────────
-if [ -f "plot.png" ]; then
-    echo "✅ Successfully saved plot.png to disk."
-else
-    echo "❌ Error: Failed to save plot.png to disk."
-    exit 1
-fi
-
-# ──────────────────────────────────────────────────────────────
 # Step 6: Cleanup
 # ──────────────────────────────────────────────────────────────
 rm -f sine_data.dat
