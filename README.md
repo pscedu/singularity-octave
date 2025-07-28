@@ -16,9 +16,9 @@ Copy the
 * `SIF` file
 * and the `octave-cli`, `pandoc` and `gnuplot` scripts
 
-to `/opt/packages/octave/6.3.0`.
+to `/opt/packages/octave/10.2.0`.
 
-Copy the file `modulefile.lua` to `/opt/modulefiles/octave` as `6.3.0.lua`.
+Copy the file `modulefile.lua` to `/opt/modulefiles/octave` as `10.2.0.lua`.
 
 ## Building the image using the recipe
 
