@@ -10,10 +10,26 @@ From: gnuoctave/octave:10.2.0
     VERSION 10.2.0
 
 %post
+    # Ensure temporary directories exist and are writable (apt needs this)
+    mkdir -p /tmp /var/tmp
+    chmod 1777 /tmp /var/tmp
+
+    # Force apt to use a writable temp dir just in case
+    export TMPDIR=/var/tmp
+    export DEBIAN_FRONTEND=noninteractive
+
+    # Update and install packages
     apt-get update
-    apt-get install -y gnuplot pandoc vim imagemagick ffmpeg
+    apt-get install -y --no-install-recommends \
+        gnuplot \
+        pandoc \
+        vim \
+        imagemagick \
+        ffmpeg
+
+    # Clean up to keep image small
     apt-get clean
-    apt-get autoclean
+    rm -rf /var/lib/apt/lists/*
 
 %runscript
-    octave-cli "$@"
+    exec octave-cli "$@"
