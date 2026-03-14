@@ -1,0 +1,35 @@
+Bootstrap: docker
+From: gnuoctave/octave:11.1.0
+
+%labels
+    MAINTAINER icaoberg, luism
+    EMAIL icaoberg@psc.edu, luism@psc.edu
+    SUPPORT help@psc.edu
+    WEBSITE http://github.com/pscedu/singularity-octave
+    COPYRIGHT Copyright © 2024-2026, Pittsburgh Supercomputing Center. All Rights Reserved.
+    VERSION 11.1.0
+
+%post
+    # Ensure temporary directories exist and are writable (apt needs this)
+    mkdir -p /tmp /var/tmp
+    chmod 1777 /tmp /var/tmp
+
+    # Force apt to use a writable temp dir just in case
+    export TMPDIR=/var/tmp
+    export DEBIAN_FRONTEND=noninteractive
+
+    # Update and install packages
+    apt-get update
+    apt-get install -y --no-install-recommends \
+        gnuplot \
+        pandoc \
+        vim \
+        imagemagick \
+        ffmpeg
+
+    # Clean up to keep image small
+    apt-get clean
+    rm -rf /var/lib/apt/lists/*
+
+%runscript
+    exec octave-cli "$@"
